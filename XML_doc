@@ -1,0 +1,891 @@
+1)Add user group channel group relation
+	<XMLDakshaImaging>
+		<Action Name="AddUGroupCGroupRelation">
+			<SessionID></SessionID>
+			<UGID>197784636</UGID>
+			<CGID>197784636</CGID>
+			<UID>1</UID>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+	<?xml version="1.0" encoding="utf-8"?>
+
+	<XMLDakshaImaging>
+		<Response ActionName="AddUserUGroupChannelCGroupRelation">
+			<Success>Ok</Success>
+		</Response>
+	</XMLDakshaImaging>
+
+2)Fetch user group and channel group relation
+	<XMLDakshaImaging>
+		<Action Name="FetchUGroupCGroupRelation">
+			<SessionID></SessionID>
+		</Action>
+	</XMLDakshaImaging>
+	
+	Response
+	<?xml version="1.0" encoding="utf-8"?>
+
+	<XMLDakshaImaging>
+		<Response ActionName="FetchUGroupCGroupRelation">
+			<UGroupCGroupInfo>
+				<UGName>Human Resource</UGName>
+				<CGName>humanCamera</CGName>
+				<UGID>197784630</UGID>
+				<CGID>197784630</CGID>
+			</UGroupCGroupInfo>
+		</Response>
+	</XMLDakshaImaging>
+3)Edit Channel group
+	<XMLDakshaImaging>
+		<Action Name="EditCGroup">
+			<SessionID></SessionID>
+			<CGroupInfo>
+				<CGID>197784630</CGID>
+				<AddChannel>
+					<CID>197784631</CID>
+				</AddChannel>
+			</CGroupInfo>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+
+	<XMLDakshaImaging>
+		<Response ActionName="EditCGroup">
+			<Error>
+				<ErrorMsg>Unable to Add User To UserGroup</ErrorMsg>
+				<ErrorId>113</ErrorId>
+			</Error>
+		</Response>
+	</XMLDakshaImaging>
+4)Edit User group
+	<XMLDakshaImaging>
+		<Action Name="EditUGroup">
+			<SessionID></SessionID>
+			<UGroupInfo>
+				<UGID>190641315</UGID>
+				<AddUser>
+					<UID>1</UID>
+				</AddUser>
+			</UGroupInfo>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="EditUGroup">
+			<Success>ok</Success>
+		</Response>
+	</XMLDakshaImaging>
+5)Update Channel
+	<XMLDakshaImaging>
+		<Action Name="UpdateChannel">
+			<SessionID></SessionID>
+			<DID>3018</DID>
+			<CID>197784633</CID>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="UpdateChannel">
+			<Success>Ok</Success>
+		</Response>
+	</XMLDakshaImaging>
+6)Fetch all device
+	<XMLDakshaImaging>
+		<Action Name="FetchAllDevice">
+			<SessionID></SessionID>
+		</Action>
+	</XMLDakshaImaging>
+
+
+	Response
+
+	<XMLDakshaImaging>
+		<Response ActionName="FetchAllDevice">
+			<DeviceInfo>
+				<DID>2909</DID>
+				<DName>2909ownerNAS</DName>
+				<DeviceIP>192.168.1.101</DeviceIP>
+				<Status>1</Status>
+				<Owner>0</Owner>
+				<BACKUP>0</BACKUP>
+				<MacAddress>00:1e:67:2e:2d:74</MacAddress>
+			</DeviceInfo>
+			<DeviceInfo>
+				<DID>3018</DID>
+				<DName>3018ownerNAS</DName>
+				<DeviceIP>192.168.1.44</DeviceIP>
+				<Status>1</Status>
+				<Owner>1</Owner>
+				<BACKUP>0</BACKUP>
+				<MacAddress>40:8d:5c:6f:a7:41</MacAddress>
+			</DeviceInfo>
+		</Response>
+	</XMLDakshaImaging>
+
+7)Fetch all users
+
+	<XMLDakshaImaging>
+		<Action Name="FetchAllUser">
+			<SessionID></SessionID>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="FetchAllUser">
+			<UserInfo>
+				<UID>1</UID>
+				<UName>admin</UName>
+				<UserName>admin</UserName>
+				<Password>admin</Password>
+				<UserRole>0</UserRole>
+				<Email>hgfhg</Email>
+				<ContactNo>57</ContactNo>
+				<Status>1</Status>
+			</UserInfo>
+		</Response>
+	</XMLDakshaImaging>
+
+8)Add channel
+	<XMLDakshaImaging>
+		<Action Name="AddChannel">
+			<SessionID></SessionID>
+			<ChannelName>anand</ChannelName>
+			<UserName>admin</UserName>
+			<Password>12345</Password>
+			<IPAddress>192.168.1.204</IPAddress>
+			<PortNo>5554</PortNo>
+			<RTSP>mnkbjbn</RTSP>
+			<RetrieveMode>1</RetrieveMode>
+			<Status>1</Status>
+			<StorageStatus>1</StorageStatus>
+			<StorageSpace>2000</StorageSpace>
+			<StorageFileType>H264</StorageFileType>
+			<PTZ>0</PTZ>
+			<ReplicaMode>0</ReplicaMode>
+			<Make>xyz</Make>
+			<Model>menn</Model>
+			<Desc>hfshh</Desc>
+			<StreamMode>1</StreamMode>
+			<Motion>0</Motion>
+			<DID>3018</DID>
+			<AddChannelCGroup>
+			<CGID>197784630</CGID>
+			</AddChannelCGroup>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+	
+	<XMLDakshaImaging>
+		<Response ActionName="AddChannel">
+			<Error>
+			<ErrorMsg>Failed to insert channelcgroup mapping into the Database</ErrorMsg>
+			<ErrorId>103</ErrorId>
+			</Error>
+		</Response>
+		<Response ActionName="AddChannel">
+			<Success>ok</Success>
+			<CID>197784634</CID>
+		</Response>
+	</XMLDakshaImaging>
+
+
+9)Add cahnnel cgroup relation
+
+	<XMLDakshaImaging>
+		<Action Name="AddChannelCGroupRelation">
+			<SessionID></SessionID>
+			<CID>197784630</CID>
+			<CGID>197784630</CGID>
+			<UID>1</UID>
+		</Action>
+	</XMLDakshaImaging>
+	
+	Response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+	<Response ActionName="AddchannelCGroupRelation">
+	<Success>Ok</Success>
+	</Response>
+	</XMLDakshaImaging>
+
+10)Add user ugroup relation
+
+	<XMLDakshaImaging>
+		<Action Name="AddUserUGroupRelation">
+			<SessionID></SessionID>
+			<UGID>197784632</UGID>
+			<UID>197784631</UID>
+		</Action>
+	</XMLDakshaImaging>
+
+	response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="AddUserUGroupRelation">
+			<Success>Ok</Success>
+		</Response>
+	</XMLDakshaImaging>
+
+11)Add channel group
+	<XMLDakshaImaging>
+		<Action Name="AddCGroup">
+			<SessionID></SessionID>
+			<CGroupInfo>
+				<CGNAME>hahahahaha</CGNAME>
+				<CID>197784634</CID>
+				<Priority></Priority>
+			</CGroupInfo>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+	
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="AddCGroup">
+			<Error>
+			<ErrorMsg>Failed to remove channelcgroup mapping into the Database</ErrorMsg>
+			<ErrorId>103</ErrorId>
+			</Error>
+		</Response>
+		<Response ActionName="AddCGroup">
+			<Success>Ok</Success>
+			<CGID>197784642</CGID>
+		</Response>
+	</XMLDakshaImaging>
+
+12)Add user group
+	<XMLDakshaImaging>
+		<Action Name="AddUGroup">
+			<SessionID></SessionID>
+			<UGroupInfo>
+				<UGNAME>hahahahaha</UGNAME>
+				<UID>1</UID>
+				<Priority></Priority>
+			</UGroupInfo>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+	
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="AddUGroup">
+			<Success>Ok</Success>
+			<UGID>197784637</UGID>
+		</Response>
+	</XMLDakshaImaging>
+
+13)Add user
+
+	<XMLDakshaImaging>
+		<Action Name="AddUser">
+			<SessionID></SessionID>
+			<UName>fhfhf</UName>
+			<UserName>dghgfh</UserName>
+			<Password>1234</Password>
+			<UserRole>1</UserRole>
+			<Email>faah@dshs</Email>
+			<ContactNo>5567889</ContactNo>
+			<Status>1</Status>
+			<AddUserUGroup>
+			<UGID>197784630</UGID>
+			</AddUserUGroup>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+	
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="AddUser">
+			<Success>
+			<UID>197784633</UID>
+			</Success>
+		</Response>
+	</XMLDakshaImaging>
+
+14)Restream 
+	<XMLDakshaImaging>
+	<Action Name="StartRestream">
+		<SessionID></SessionID>
+		<RestreamInfo>
+			<CID>197784631</CID>
+			<DID>3018</DID>
+			<Width>44</Width>
+			<Height>44</Height>
+			<FrameRate>44</FrameRate>
+			<BitRate>44</BitRate>
+		</RestreamInfo>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+	
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="StartRestream">
+			<Success>
+			<RestreamID>2</RestreamID>
+			</Success>
+		</Response>
+	</XMLDakshaImaging>
+
+15)Get all channel detail for did
+
+	<XMLDakshaImaging>
+		<Action Name="GetAllChannelDetailsForDID">
+			<SessionID></SessionID>
+			<DID>3018</DID>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="GetAllChannelDetailsForDID">
+			<ChannelInfo>
+				<ChannelName>c108CH1</ChannelName>
+				<Dumping>Enable</Dumping>
+				<Resend>Disable</Resend>
+				<Restream>Enable</Restream>
+				<Retrieve>Enable</Retrieve>
+				<ReplicaMode>Disable</ReplicaMode>
+				<Status>Enable</Status>
+			</ChannelInfo>
+		</Response>
+	</XMLDakshaImaging>
+
+16)Fetch storage info
+	
+	<XMLDakshaImaging>
+		<Action Name="FetchStorageInfo">
+			<SessionID></SessionID>
+			<DID>3018</DID>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+	
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="FetchStorageInfo">
+			<StorageInfo>
+			<MaxSpace>10000000000</MaxSpace>
+			<FreeSpace>100000000</FreeSpace>
+			</StorageInfo>
+		</Response>
+	</XMLDakshaImaging>
+
+17)Fetch all user group info without detail
+
+	<XMLDakshaImaging>
+		<Action Name="FetchAllUserGroupWithoutDetail">
+			<SessionID></SessionID>
+		</Action>
+	</XMLDakshaImaging>
+
+	response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="FetchAllUserGroupWithoutDetail">
+			<UGInfo>
+			<UGName>adminGroup</UGName>
+			<UGID>197784633</UGID>
+			</UGInfo>
+		</Response>
+	</XMLDakshaImaging>
+
+18)Fetch all channel group without detail
+	XMLDakshaImaging>
+		<Action Name="FetchAllChannelGroupWithoutDetail">
+			<SessionID></SessionID>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="FetchAllChannelGroupWithoutDetail">
+			<CGInfo>
+				<CGName>adaasda</CGName>
+				<CGID>197784631</CGID	
+			</CGInfo>
+			<CGInfo>
+				<CGName>CG1</CGName>
+				<CGID>197784636</CGID>
+			</CGInfo>
+		</Response>
+	</XMLDakshaImaging>
+
+19)Fetch all channel without detail
+	<XMLDakshaImaging>
+		<Action Name="FetchAllChannelWithoutDetail">
+			<SessionID></SessionID>
+		</Action>
+	</XMLDakshaImaging>
+
+	response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="FetchAllChannelWithoutDetail">
+			<CInfo>
+				<CName>c108CH1</CName>
+				<CID>197784630</CID>
+			</CInfo>
+			<CInfo>
+				<CName>assa</CName>
+				<CID>197784631</CID>
+			</CInfo>
+		</Response>
+	</XMLDakshaImaging>
+
+20)Fetch all device without detail
+
+	<XMLDakshaImaging>
+		<Action Name="FetchAllDeviceWithoutDetail">
+			<SessionID></SessionID>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+	
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="FetchAllDeviceWithotuDetail">
+			<DInfo>
+				<DName>2909ownerNAS</DName>
+				<DID>2909</DID>
+			</DInfo>
+			<DInfo>
+				<DName>3018ownerNAS</DName>
+				<DID>3018</DID>
+			</DInfo>
+		</Response>
+	</XMLDakshaImaging>
+
+21)Fetch all user without detail
+	<XMLDakshaImaging>
+		<Action Name="FetchAllUserWithoutDetail">
+			<SessionID></SessionID>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+	
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="FetchAllUserWithoutDetail">
+			<UInfo>
+				<UName>admin</UName>
+				<UID>1</UID>
+			</UInfo>
+			<UInfo>
+				<UName>qwe</UName>
+				<UID>197784631</UID>
+			</UInfo>
+			<UInfo>
+				<UName>Google</UName>
+				<UID>197784632</UID>
+			</UInfo>
+		</Response>
+	</XMLDakshaImaging>
+
+
+22)Get date
+	XMLDakshaImaging>
+		<Action Name="GetDate">
+			<SessionID></SessionID>
+			<IntervalID>1</IntervalID>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+	
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="GetDate">
+			<DateInfo>
+				<ID>4</ID>
+				<Name>2016-03-29</Name>
+			</DateInfo>
+		</Response>
+	</XMLDakshaImaging>
+
+
+23)Fetch all user ugroup relation
+
+	XMLDakshaImaging>
+		<Action Name="FetchAllUserUGroupRelation">
+			<SessionID></SessionID>
+			<IntervalID>1</IntervalID>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+
+	<XMLDakshaImaging>
+		<Response ActionName="FetchAllUserUGroupRelation">
+			<UserUGroupInfo>
+				<UGName>ug1</UGName>
+				<UID>1</UID>
+				<UGID>190641315</UGID>
+			</UserUGroupInfo>
+			//multiple usergroupinfo
+		</Response>
+	</XMLDakshaImaging>
+
+24)Update User
+	<XMLDakshaImaging>
+		<Action Name="UpdateUser">
+			<SessionID></SessionID>
+			<UID>197784633</UID>
+			<UName>fhfhf</UName>
+			<UserName>dghgfh</UserName>
+			<Password>12345678</Password>
+			<UserRole>1</UserRole>
+			<Email>faah@dshs</Email>
+			<ContactNo>5567889</ContactNo>
+			<Status>1</Status>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+	
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="UpdateUser">
+			<Success>Ok</Success>
+		</Response>
+	</XMLDakshaImaging>
+
+
+25)Fetch all user group
+
+	<XMLDakshaImaging>
+		<Action Name="FetchAllUGroup">
+			<SessionID></SessionID>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="FetchAllUGroup">
+			<UGroupInfo>
+				<UGID>197784633</UGID>
+				<UGName>adminGroup</UGName>
+			</UGroupInfo>
+		</Response>
+	</XMLDakshaImaging>
+
+26)Stop Dumping
+
+	<XMLDakshaImaging>
+		<Action Name="StopDumping">
+			<SessionID></SessionID>
+			<CID>197784630</CID>
+			<DID>3018</DID>
+		</Action>
+	</XMLDakshaImaging>
+
+	Resposne
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="StopDumping">
+			<Success>Dumping Successfully Stopped</Success>
+		</Response>
+	</XMLDakshaImaging>
+
+
+27)Start Dumping
+
+	<XMLDakshaImaging>
+		<Action Name="StartDumping">
+			<SessionID></SessionID>
+			<CID>197784630</CID>
+			<DID>3018</DID>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="StartDumping">
+			<Success>Dumping Successfully Started</Success>
+		</Response>
+	</XMLDakshaImaging>
+
+
+28)Active User
+
+	<XMLDakshaImaging>
+		<Action Name="ActiveUser">
+			<SessionID></SessionID>
+			<DID>3018</DID>
+		</Action>
+	</XMLDakshaImaging>
+
+	response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="ActiveUser">
+			<UserInfo>
+				<UserName>admin</UserName>
+				<UserRole>Admin</UserRole>
+				<LastLogin>2016-03-21 14:53:51</LastLogin>
+				<SystemIP>192.168.1.143</SystemIP>
+			</UserInfo>
+		</Response>
+	</XMLDakshaImaging>
+
+
+29)Offline Performance
+
+	<XMLDakshaImaging>
+		<Action Name="OfflinePerformance">
+			<SessionID></SessionID>
+			<DID>3018</DID>
+			<StartDate>2016-04-04</StartDate>
+			<StartTime>17:53:48</StartTime>
+			<EndDate>2016-04-05</EndDate>
+			<EndTime>17:53:48</EndTime>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="OfflinePerfomance">
+			<ProcessInfo>
+				<PCPU>100.075</PCPU>
+				<OCPU>100</OCPU>
+				<VM>2557912</VM>
+				<PM>149972</PM>
+				<DS>3160017810</DS>
+				<DR>187713063</DR>
+			</ProcessInfo>
+		</Response>
+	</XMLDakshaImaging>
+
+
+30)Continuous move
+
+	<XMLDakshaImaging>
+		<Action Name="ContinuousMove">
+			<SessionID></SessionID>
+			<ChannelName>anand</ChannelName>
+		</Action>
+	</XMLDakshaImaging>
+
+Response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="ContinuousMove">
+			<Error>
+				<ErrorMsg>camera does not support move</ErrorMsg>
+				<ErrorId>102</ErrorId>
+			</Error>
+		</Response>
+	</XMLDakshaImaging>
+
+31)Relative mode
+
+	<XMLDakshaImaging>
+		<Action Name="RelativeMove">
+			<SessionID></SessionID>
+			<ChannelName>anand</ChannelName>
+			<Index>north</Index>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="RelativeMove">
+			<Error>
+			<ErrorMsg>camera does not support move</ErrorMsg>
+			<ErrorId>102</ErrorId>
+			</Error>
+		</Response>
+	</XMLDakshaImaging>
+
+32)Verification Camera
+
+	<XMLDakshaImaging>
+		<Action Name="VerificationCamera">
+			<SessionID></SessionID>
+			<IP>192.168.1.204</IP>
+			<PortNumber>554</PortNumber>
+			<UserName>admin</UserName>
+			<Password>12345</Password>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="VerificationCamera">
+			<Success>Ok</Success>
+			<RTSP>rtsp://192.168.1.204:554/Streaming/Channels/1?transportmode=unicast&amp;profile=Profile_1</RTSP>
+		</Response>
+	</XMLDakshaImaging>
+
+33)Search user from ugid
+
+	<XMLDakshaImaging>
+		<Action Name="SearchUserFromUGIDs">
+			<SessionID></SessionID>
+			<UGroupInfo>
+				<UGID>197784630</UGID>
+				<SearchText>admin</SearchText>
+			</UGroupInfo>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="SearchUserFromUGIDs">
+			<UserInfo>
+				<UID>1</UID>
+				<UserName>admin</UserName>
+			</UserInfo>
+		</Response>
+	</XMLDakshaImaging>
+
+
+34)Search channel from cgid
+
+	<XMLDakshaImaging>
+		<Action Name="SearchChannelFromCGIDs">
+			<SessionID></SessionID>
+			<CGroupInfo>
+				<CGID>197784631</CGID>
+				<SearchText>assa</SearchText>
+			</CGroupInfo>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="SearchChannelFromCGIDs">
+			<ChannelInfo>
+				<CID>197784631</CID>
+				<ChannelName>assa</ChannelName>
+			</ChannelInfo>
+		</Response>
+	</XMLDakshaImaging>
+
+
+
+35)Start Process monitoring
+
+	<XMLDakshaImaging>
+		<Action Name="StartProcessMonitoring">
+			<SessionID></SessionID>
+			<DID>3018</DID>
+			<FillterValue>live</FillterValue>
+			<StartDate>2016-04-04</StartDate>
+			<StartTime>17:53:48</StartTime>
+			<EndDate>2016-04-05</EndDate>
+			<EndTime>17:53:48</EndTime>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+	
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="StartProcessMonitoring">
+			<ProcessInfo>
+				<PCPU>51.85</PCPU>
+				<OCPU>99.949987</OCPU>
+				<VM>2190616</VM>
+				<PM>76872</PM>
+				<DS>1189415859</DS>
+				<DR>369024552</DR>
+			</ProcessInfo>
+		</Response>
+	</XMLDakshaImaging>
+
+
+36)Get Live Image
+
+	<XMLDakshaImaging>
+		<Action Name="GetImageLive">
+			<SessionID></SessionID>
+			<CID>197784630</CID>
+			<ChannelName>c108CH1</ChannelName>
+		</Action>
+	</XMLDakshaImaging>
+
+	Response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="GetImageLive">
+			<Success>
+				<NumberOfImages>1</NumberOfImages>
+				<CREATINGTIME>2016-04-06 10:32:59</CREATINGTIME>
+			</Success>
+		</Response>
+	</XMLDakshaImaging>
+
+
+37)Set Image Information
+
+	<XMLDakshaImaging>
+		<Action Name="SetImageInfo">
+			<SessionID></SessionID>
+			<CGName></CGName>
+			<CName></CName>
+			<UID>1</UID>
+			<UserName>admin</UserName>
+		</Action>
+	</XMLDakshaImaging>
+
+	
+	Response
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<XMLDakshaImaging>
+		<Response ActionName="SetImageInfo">
+			<Success>Ok</Success>
+		</Response>
+	</XMLDakshaImaging>
+
+
+
+
+
